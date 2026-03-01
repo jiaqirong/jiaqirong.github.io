@@ -16,9 +16,10 @@ export const siteConfig = {
   social: {
     email: "rongjiaqi@bupt.edu.cn",
     github: "https://github.com/jiaqirong",
+    homepage: "https://jiaqirong.github.io/",
   },
   aboutMe:
-    "北京邮电大学硕士在读，主攻产品策略与增长。具备地图物流、即时配送、会员增长与智能交互场景经验，擅长把模糊业务问题拆解为可落地方案，通过数据分析、AB实验与跨团队协作推动结果交付。",
+    "北京邮电大学硕士在读，主攻产品策略与增长。具备地图物流、即时配送、会员增长与智能交互场景经验，擅长把模糊业务问题拆解为可落地方案，通过数据分析、AB实验与跨团队协作推动结果交付。熟练使用 AI 工具提升产研效率（OpenClaw 自动化工作流 + AI Coding / vibe coding 快速原型）。",
   skills: [
     "需求分析与方案拆解",
     "产品策略与增长设计",
@@ -27,6 +28,8 @@ export const siteConfig = {
     "A/B 测试与指标设计",
     "跨团队推进与项目管理",
     "AI 产品化（LLM/Prompt）",
+    "AI Coding / vibe coding（快速原型、脚本自动化）",
+    "OpenClaw 自动化工作流（信息检索/投递协作/提醒与整理）",
   ],
   projects: [
     {
