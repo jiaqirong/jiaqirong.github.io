@@ -2,6 +2,7 @@
 import { siteConfig } from "../config";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const hasPapersPatents = (siteConfig.papers && siteConfig.papers.length > 0) || (siteConfig.patents && siteConfig.patents.length > 0);
 const hasResearchProjects = siteConfig.researchProjects && siteConfig.researchProjects.length > 0;
 const hasVibeCoding = siteConfig.vibeCoding && siteConfig.vibeCoding.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
@@ -54,6 +55,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               Vibe Coding
+            </a>
+          </li>
+        )
+      }
+      {
+        hasPapersPatents && (
+          <li>
+            <a
+              href="#papers-patents"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              论文专利
             </a>
           </li>
         )

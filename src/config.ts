@@ -104,6 +104,25 @@ export const siteConfig = {
       ],
     },
   ],
+  papers: [
+    {
+      title: "Research on image compression technique by deep learning algorithm with semantic coding and d ecoding",
+      venue: "PhotonIcs and Electromagnetics Research Symposium",
+      authorship: "一作",
+    },
+    {
+      title: "Experimental Research on Image Transmission with High Compressive Rate in a Semantic Visible Light Communication System",
+      venue: "2024 14th International Symposium on Communication Systems, Networks and Digital Signal Processing (CNSDSP)",
+    },
+  ],
+  patents: [
+    {
+      title: "（公开）一种可见光通信传输方法、装置、电子设备和存储介质",
+      pubNo: "CN119051747A",
+      abstract:
+        "本发明提供一种可见光通信传输方法、装置、电子设备和存储介质，涉及无线通信技术领域。该方法包括：获取目标图像数据；基于特征提取网络提取语义信息得到语义特征；基于语义特征生成待发送数据；利用可见光介质向接收端发送待发送数据。本发明可在保持较低误码率与较远传输距离的条件下，提高系统传输比特率。",
+    },
+  ],
   experience: [
     {
       company: "Shopee 北京研发中心（Map 地图组）",
