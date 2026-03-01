@@ -24,30 +24,6 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         </a>
       </li>
       {
-        hasProjects && (
-          <li>
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              项目案例
-            </a>
-          </li>
-        )
-      }
-      {
-        hasResearchProjects && (
-          <li>
-            <a
-              href="#research-projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              科研项目
-            </a>
-          </li>
-        )
-      }
-      {
         hasVibeCoding && (
           <li>
             <a
@@ -60,13 +36,25 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         )
       }
       {
-        hasPapersPatents && (
+        hasProjects && (
           <li>
             <a
-              href="#papers-patents"
+              href="#projects"
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
-              论文专利
+              项目案例
+            </a>
+          </li>
+        )
+      }
+      {
+        hasEducation && (
+          <li>
+            <a
+              href="#education"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              教育经历
             </a>
           </li>
         )
@@ -84,13 +72,25 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         )
       }
       {
-        hasEducation && (
+        hasResearchProjects && (
           <li>
             <a
-              href="#education"
+              href="#research-projects"
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
-              教育经历
+              科研项目
+            </a>
+          </li>
+        )
+      }
+      {
+        hasPapersPatents && (
+          <li>
+            <a
+              href="#papers-patents"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              论文专利
             </a>
           </li>
         )

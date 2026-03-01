@@ -152,26 +152,6 @@ const hasGithub = siteConfig.social?.github;
             >关于我</a
           >
           {
-            hasProjects && (
-              <a
-                href="#projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                项目案例
-              </a>
-            )
-          }
-          {
-            hasResearchProjects && (
-              <a
-                href="#research-projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                科研项目
-              </a>
-            )
-          }
-          {
             hasVibeCoding && (
               <a
                 href="#vibe-coding"
@@ -182,12 +162,22 @@ const hasGithub = siteConfig.social?.github;
             )
           }
           {
-            hasPapersPatents && (
+            hasProjects && (
               <a
-                href="#papers-patents"
+                href="#projects"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                论文专利
+                项目案例
+              </a>
+            )
+          }
+          {
+            hasEducation && (
+              <a
+                href="#education"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                教育经历
               </a>
             )
           }
@@ -202,12 +192,22 @@ const hasGithub = siteConfig.social?.github;
             )
           }
           {
-            hasEducation && (
+            hasResearchProjects && (
               <a
-                href="#education"
+                href="#research-projects"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                教育经历
+                科研项目
+              </a>
+            )
+          }
+          {
+            hasPapersPatents && (
+              <a
+                href="#papers-patents"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                论文专利
               </a>
             )
           }
