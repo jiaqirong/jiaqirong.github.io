@@ -1,0 +1,66 @@
+---
+import { siteConfig } from "../config";
+const items = siteConfig.researchProjects ?? [];
+const hasResearch = items.length > 0;
+---
+
+{
+  hasResearch && (
+    <section id="research-projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              科研项目
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {items.map((item, index) => (
+                <div class="group relative">
+                  <div class="block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300">
+                    <div class="space-y-4">
+                      <div>
+                        <span
+                          class="text-sm font-mono"
+                          style={{ color: siteConfig.accentColor }}
+                        >
+                          0{index + 1}
+                        </span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                          {item.name}
+                        </h3>
+                        <div class="mt-1 text-sm text-gray-500">
+                          {item.role} · {item.dateRange}
+                        </div>
+                      </div>
+
+                      {item.description && (
+                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                          {item.description}
+                        </p>
+                      )}
+
+                      {item.bullets?.length ? (
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                          {item.bullets.map((b) => (
+                            <li>{b}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
