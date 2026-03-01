@@ -2,6 +2,7 @@
 import { siteConfig } from "../config";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const hasVibeCoding = siteConfig.vibeCoding && siteConfig.vibeCoding.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
@@ -28,6 +29,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               项目案例
+            </a>
+          </li>
+        )
+      }
+      {
+        hasVibeCoding && (
+          <li>
+            <a
+              href="#vibe-coding"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Vibe Coding
             </a>
           </li>
         )

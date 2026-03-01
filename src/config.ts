@@ -51,6 +51,33 @@ export const siteConfig = {
       skills: ["用户分层", "增长策略", "AB 测试", "平台化建设"],
     },
   ],
+  vibeCoding: [
+    {
+      name: "Vibe Coding 开发个人作品集网站（Astro + Tailwind）",
+      dateRange: "2026.02 - 2026.03",
+      description:
+        "使用 AI Coding / vibe coding 方式快速完成页面结构搭建与内容配置，沉淀可复用模板，将个人经历/项目结构化呈现并支持持续迭代。",
+      bullets: [
+        "将个人信息、技能、项目与经历抽象为配置（config 驱动），降低维护成本。",
+        "结合静态站生成与组件化开发，快速迭代信息表达与信息层级。",
+        "通过 GitHub Pages 持续部署，让简历与作品集保持同步更新。",
+      ],
+      links: [
+        { label: "个人主页", href: "https://jiaqirong.github.io/" },
+      ],
+    },
+    {
+      name: "部署 OpenClaw：自动化求职投递与信息整理",
+      dateRange: "2026.03",
+      description:
+        "基于 OpenClaw 搭建个人自动化助手工作流，用于招聘官网投递协作、岗位检索与投递记录整理；在需要短信/图形验证码时由人工接管，保证合规与稳定。",
+      bullets: [
+        "将高频重复操作（筛选岗位、填写信息、跟踪投递状态）流程化/自动化。",
+        "通过 hooks/定时任务/会话管理提升投递效率与可追溯性。",
+        "结合大模型能力进行 JD 匹配、话术生成与材料迭代。",
+      ],
+    },
+  ],
   experience: [
     {
       company: "Shopee 北京研发中心（Map 地图组）",

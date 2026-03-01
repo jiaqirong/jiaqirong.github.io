@@ -2,6 +2,7 @@
 import { siteConfig } from "../config";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const hasVibeCoding = siteConfig.vibeCoding && siteConfig.vibeCoding.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 const hasEmail = siteConfig.social?.email;
@@ -155,6 +156,16 @@ const hasGithub = siteConfig.social?.github;
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
                 项目案例
+              </a>
+            )
+          }
+          {
+            hasVibeCoding && (
+              <a
+                href="#vibe-coding"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Vibe Coding
               </a>
             )
           }
