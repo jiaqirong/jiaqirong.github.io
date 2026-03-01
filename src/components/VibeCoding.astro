@@ -2,59 +2,84 @@
 import { siteConfig } from "../config";
 
 const items = siteConfig.vibeCoding ?? [];
-
-if (!items.length) {
-  return null;
-}
+const hasVibeCoding = items.length > 0;
 ---
 
-<section id="vibe-coding" class="scroll-mt-24">
-  <div class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Vibe Coding & OpenClaw 实践</h2>
-    <p class="mt-3 text-gray-600">
-      以“AI 辅助快速产出 + 可落地交付”为导向，沉淀从需求到上线的自动化工作流。
-    </p>
+{
+  hasVibeCoding && (
+    <section id="vibe-coding" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Vibe Coding
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+            <p class="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
+              以“AI 辅助快速产出 + 可落地交付”为导向，沉淀从需求到上线的自动化工作流。
+            </p>
+          </div>
 
-    <div class="mt-8 grid gap-6">
-      {
-        items.map((item) => (
-          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <div class="flex flex-col gap-1">
-              <h3 class="text-xl font-semibold text-gray-900">{item.name}</h3>
-              {item.dateRange && (
-                <div class="text-sm text-gray-500">{item.dateRange}</div>
-              )}
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {items.map((item, index) => (
+                <div class="group relative">
+                  <div class="block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300">
+                    <div class="space-y-4">
+                      <div>
+                        <span
+                          class="text-sm font-mono"
+                          style={{ color: siteConfig.accentColor }}
+                        >
+                          0{index + 1}
+                        </span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                          {item.name}
+                        </h3>
+                        {item.dateRange && (
+                          <div class="mt-1 text-sm text-gray-500">{item.dateRange}</div>
+                        )}
+                      </div>
+
+                      {item.description && (
+                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                          {item.description}
+                        </p>
+                      )}
+
+                      {item.bullets?.length ? (
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                          {item.bullets.map((b) => (
+                            <li>{b}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+
+                      {item.links?.length ? (
+                        <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
+                          {item.links.map((l) => (
+                            <a
+                              href={l.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:bg-gray-800"
+                            >
+                              {l.label}
+                            </a>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            {item.description && (
-              <p class="mt-3 text-gray-700 leading-relaxed">{item.description}</p>
-            )}
-
-            {item.bullets?.length ? (
-              <ul class="mt-4 list-disc pl-5 space-y-2 text-gray-700">
-                {item.bullets.map((b) => (
-                  <li>{b}</li>
-                ))}
-              </ul>
-            ) : null}
-
-            {item.links?.length ? (
-              <div class="mt-4 flex flex-wrap gap-3">
-                {item.links.map((l) => (
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm font-medium text-teal-700 hover:text-teal-900 underline underline-offset-4"
-                  >
-                    {l.label}
-                  </a>
-                ))}
-              </div>
-            ) : null}
-          </article>
-        ))
-      }
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
