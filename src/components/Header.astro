@@ -24,18 +24,6 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         </a>
       </li>
       {
-        hasVibeCoding && (
-          <li>
-            <a
-              href="#vibe-coding"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Vibe Coding
-            </a>
-          </li>
-        )
-      }
-      {
         hasEducation && (
           <li>
             <a
@@ -67,6 +55,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               项目案例
+            </a>
+          </li>
+        )
+      }
+      {
+        hasVibeCoding && (
+          <li>
+            <a
+              href="#vibe-coding"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Vibe Coding
             </a>
           </li>
         )
